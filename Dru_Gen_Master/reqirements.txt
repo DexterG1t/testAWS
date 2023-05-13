@@ -1,0 +1,12 @@
+Flask
+MarkupSafe
+huggingface_hub
+torch
+pillow
+diffusions
+transformers
+diffusers==0.11.1 
+ftfy
+accelerate
+optparse
+svgutils

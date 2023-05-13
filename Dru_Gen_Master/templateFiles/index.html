@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<style>
+    body{background: rgb(238,174,202);background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);}
+    .main_div{ width: 85%; height: 90%; border-radius: 15px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); position: absolute; margin: auto; top: 0; right: 0; bottom: 0; left: 0;}
+    .tile{text-align: center;  font-family: 'Inter', sans-serif; font-size: 250%;}
+    .tytle_for_input{  padding-left: 26%; padding-top: 1%; font-family: 'Inter', sans-serif; font-size: 150%;}
+    .prompt{box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); position: relative; top: 0; left: 20%; border-radius: 15px; outline: none; -moz-appearance: none; border: 1px solid #999; padding-left: 2%;  width: 64.6% ; height: 130px; background: rgb(238,174,202);background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%); font-family: 'Inter', sans-serif; font-size: 150%;}
+    .next{ box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);position: absolute; bottom: 5%; right:18%; border-radius: 15px; width: 10%; height: 35px; font-family: 'Inter', sans-serif; font-size: 150%; background: rgb(238,174,202);background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);}
+    
+</style>
+<body>
+
+    <div class="main_div">
+        <p class="tile">Dru Gen</p>
+        <p class="tytle_for_input">About your project</p>
+        <form method="POST" action={{ url_for('submit_form') }}>
+            <textarea class='prompt' name="AboutLogo" required="required"></textarea><br>
+            <p class="tytle_for_input">Main object in logo</p>
+            <textarea class='prompt' name="LogoObject" required="required"></textarea><br>
+            <input type="submit"  class="next" value="Next" id="next">
+        </form>
+    </div>
+    <script>
+        document.querySelector('form').addEventListener('submit', function() {
+          window.location.reload(true);
+        });
+      </script>
+</body>
+</html> 

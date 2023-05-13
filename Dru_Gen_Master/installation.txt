@@ -1,0 +1,6 @@
+1. Install the reqirements.txt file using "pip" (pip install -r reqirements.txt)
+2. Run the installation file, if you have gpu from Nvidia, run "setup_gpu.py" and go to download cuda (https://developer.nvidia.com/cuda-downloads),
+in case you use cpu run "setup_cpu.py" and do not need to download cuda.
+3. Run "flask_template.py" and wait for the server to load.
+4. Go to the "http://127.0.0.1:4567" link.
+5. Now you can use webui.
